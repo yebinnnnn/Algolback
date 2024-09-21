@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Objects;
-import java.util.StringTokenizer;
 
 public class Back2941 { //띄어쓰기로 구분되지 않는건 StringToknizer 보다 CharAt 을 써야한다.
     public static void main(String[] args) throws IOException {
