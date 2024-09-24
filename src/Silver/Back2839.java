@@ -27,5 +27,6 @@ public class Back2839 { //메모리가 크게 나와서 아쉬운 해결
             }
         }
         System.out.println(bag);
+        //깃 연결 확인.
     }
 }
