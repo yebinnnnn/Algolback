@@ -15,7 +15,7 @@ public class Back1181 {
         for(int i=0; i<number; i++){
             words[i]=bf.readLine();
         }
-        Arrays.sort(words, new Comparator<String>() {
+        Arrays.sort(words, new Comparator<String>(){
             public int compare(String o1, String o2) {
                 if(o1.length()==o2.length()){
                     return o1.compareTo(o2);
