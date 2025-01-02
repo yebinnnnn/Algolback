@@ -33,8 +33,5 @@ public class Back1546 {
         //scores.add(Integer.parseInt(st.nextToken())); 일일히 하는거보다 위가 맞음.
         //scores.add(Integer.parseInt(st.nextToken()));
         //scores.add(Integer.parseInt(st.nextToken()));
-
-
-
     }
 }
