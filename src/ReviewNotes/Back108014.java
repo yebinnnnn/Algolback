@@ -20,8 +20,8 @@ public class Back108014 { //11650 과 비슷한 문제 (정렬 기준은 좀 다
         //정렬 이거 말고 쫌 할 수 있는 방법은 없나,,,, 없는 듯
         Arrays.sort(users, new Comparator<String[]>(){
             @Override
-            public int compare(String[]o1, String[]o2) {
-                return Integer.parseInt(o1[0]) - Integer.parseInt(o2[0]);
+            public int compare(String[]o1, String[]o2){
+                return Integer.parseInt(o1[0])-Integer.parseInt(o2[0]);
             }
         });
 
