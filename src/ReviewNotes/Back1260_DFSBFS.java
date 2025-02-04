@@ -2,7 +2,7 @@ package ReviewNotes;
 import java.util.*;
 import java.io.*;
 
-public class Back1260 {
+public class Back1260_DFSBFS {
     static int node;
     static int line;
     static boolean[] check;
