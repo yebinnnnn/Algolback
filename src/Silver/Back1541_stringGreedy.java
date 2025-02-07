@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.*;
 import java.util.*;
 
-public class Back1541_String { //그리디 -> 탐욕 알고리즘. 순간순간 좋은걸 고르자 (탐색/브루트포스랑 어떻게 비교하지)
+public class Back1541_stringGreedy { //그리디 -> 탐욕 알고리즘. 순간순간 좋은걸 고르자 (탐색/브루트포스랑 어떻게 비교하지)
     public static void main(String[] args)throws IOException {
         String input;
         BufferedReader bf= new BufferedReader(new InputStreamReader(System.in));
