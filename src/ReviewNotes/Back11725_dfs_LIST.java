@@ -43,7 +43,7 @@ public class Back11725_dfs_LIST {//그래프 아니고 트리. 트리 안해봤�
         answer[child] = parent; // 부모 저장
 
         for (int next:tree.get(child)) {
-            if (next != parent) { // 부모 노드로 되돌아가지 않도록 방지
+            if (next != parent){ // 부모 노드로 되돌아가지 않도록 방지
                 dfs(next, child);
             }
         }
