@@ -30,7 +30,7 @@ public class Back2504_Stack {
             }//여기까진 쉽당께
             else if (c == ')') { //왼쪽이 더 할당된 경우
                 if (stack.isEmpty() || stack.peek() != '(') {
-                    sb.append("0");
+                    answer=0;
                     break;
                 } else if (practices.charAt(i - 1) == '(') {
                     answer += value;
@@ -39,7 +39,7 @@ public class Back2504_Stack {
                 value /= 2;
             } else if (c == ']') {
                 if (stack.isEmpty() || stack.peek() != '[') {
-                    sb.append("0");
+                    answer=0;
                     break;
                 } else if (practices.charAt(i - 1) == '[') {
                     answer += value;
@@ -48,7 +48,7 @@ public class Back2504_Stack {
                 value /= 3;
             }
         }
-        if (stack.isEmpty()) {
+        if (!stack.isEmpty()) {
             sb.append("0");
         } else {
             sb.append(answer).append("\n");
@@ -57,17 +57,6 @@ public class Back2504_Stack {
     }
 
         //스택 잘못 쌓은 예시
-//        char[] practice=practices.toCharArray(); //char 배열로 바꿔줌.
-//        for(char c : practice){
-//            stack.push(c);
-//        } //모든 괄호 먼저 스택에 집어넣기
-//
-//        int doublecount=0;
-//        int thirdcount=0;
-//        int allsum=0;
-//        int readysum=1;
-//        StringBuilder sb= new StringBuilder();
-//
 //        while(!stack.isEmpty()){
 //            char popped=stack.pop();
 //            if(popped==')'){
