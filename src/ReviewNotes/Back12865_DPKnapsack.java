@@ -1,15 +1,12 @@
-package Gold;
+package ReviewNotes;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.StringTokenizer;
 
-public class Back12865_DP {//물품의 수는 100, 무게는 십만, 가치는 천
+public class Back12865_DPKnapsack {//물품의 수는 100, 무게는 십만, 가치는 천
     public static int[][] dp;
-
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(bf.readLine());
