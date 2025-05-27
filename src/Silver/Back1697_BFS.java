@@ -25,7 +25,7 @@ public class Back1697_BFS {
         check[start]=true;
         q.add(start);
         time[start]=0;
-
+        String in;
         while(!q.isEmpty()){
             int current=q.poll();//내가 현재 있는 노드.
             if(current==sister){
