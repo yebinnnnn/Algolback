@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class Solution {
+class Solution2 {
     public class Node{
     String st;
     int depth;
@@ -41,5 +41,51 @@ class Solution {
             if (now.charAt(i) != init.charAt(i)) diff++;
         }
         return diff == 1;
+    }
+}
+
+class Solution{ //bfs+ differ 라는 검사 함수 따로 구현할 것
+    public class Node{
+        String st;
+        int depth;
+        public Node(String st, int depth){
+            this.st=st;
+            this.depth=depth;
+        }
+    }
+    public int solution(String begin, String target, String[] words){
+        boolean[] checking=new boolean[words.length];
+        Queue<Node> q= new ArrayDeque<>();
+        Node nodes=new Node(begin,0);
+        q.add(nodes);
+        //탐색시작
+        while(!q.isEmpty()){
+            //현재 도착해있는 단어
+            Node node=q.poll();
+            if(node.st.equals(target)){
+                return node.depth;
+            }
+            for(int i=0; i<words.length; i++){
+                if(!checking[i]&&differ(node.st, words[i])){
+                    checking[i]=true;
+                    q.add(new Node(words[i], node.depth+1));
+                    continue;
+                }
+            }
+        }
+        return 0;
+    }
+    public boolean differ(String s, String come){
+        int diff=0;
+        for(int i=0; i<s.length(); i++){
+            if(s.charAt(i)!=come.charAt(i)){
+                diff++;
+            }
+        }
+        if(diff==1){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
