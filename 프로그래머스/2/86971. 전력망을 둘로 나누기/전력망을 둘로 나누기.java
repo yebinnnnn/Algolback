@@ -39,7 +39,7 @@ class Solution2 {
     }
 }
 
-class Solution{
+class Solution3{
     boolean[] checking;
     int answer=Integer.MAX_VALUE;
     public int solution(int n, int[][] wires){
@@ -66,6 +66,35 @@ class Solution{
             }
         }
         answer=Math.min(answer,Math.abs(n-2*count));
+        return count;
+    }
+}
+
+class Solution{
+    int answer=Integer.MAX_VALUE;
+    public int solution(int n, int[][] wires){
+        HashMap<Integer, List<Integer>> map = new HashMap<>();
+        boolean[] checking = new boolean[n+1];
+        for(int i=1; i<=n; i++){
+            //초기 맵 할당해줌
+            map.put(i,new ArrayList<>());
+        }
+        for(int[] wire : wires){
+            map.get(wire[0]).add(wire[1]);
+            map.get(wire[1]).add(wire[0]);
+        }
+        int count=dfs(map,n,checking,1);
+        return answer;
+    }
+    public int dfs(HashMap<Integer,List<Integer>> map, int n,boolean[] checking, int start){
+        checking[start]=true;
+        int count=1;
+        for(int i=0; i<map.get(start).size(); i++){
+            if(!checking[map.get(start).get(i)]){
+                count+=dfs(map,n, checking, map.get(start).get(i));
+            }
+        }
+        answer= Math.min(answer, Math.abs(n-2*count));
         return count;
     }
 }
